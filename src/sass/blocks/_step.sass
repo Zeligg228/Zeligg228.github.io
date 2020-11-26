@@ -1,0 +1,114 @@
+.step
+  margin-bottom: 110px
+  &__title
+    margin-top: 0
+    margin-bottom: 40px
+    font-size: 64px
+    line-height: 134.69%
+    color: #FFFFFF
+    +bold
+    & > strong
+      color: #3FDB90
+  &-block
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    flex-wrap: wrap
+    margin-top: -175px
+    margin-bottom: -250px
+    &__item
+      display: flex
+      flex-direction: column
+      align-items: center
+      width: 16%
+      &__last
+        width: 100%
+        margin-top: 40px
+        margin-left: auto
+        margin-right: auto
+    &__image
+      display: flex
+      align-items: center
+      justify-content: center
+      border: 0.5px solid #FFFFFF
+      border-radius: 50%
+      padding: 23px
+      width: 96px
+      height: 96px
+      margin-bottom: 17px
+    &__text
+      width: 100%
+      text-align: center
+      font-size: 18px
+      line-height: 23px
+      text-align: center
+      color: #D8D8D8
+      & > strong
+        font-weight: normal
+        color: #3FDB90
+      &__last
+        +bold
+    &__arrow
+      width: 15%
+      position: relative
+      top: 40px
+      margin-left: -20px
+      margin-right: -20px
+      & > img
+        display: block
+        max-width: 100%
+  &-box
+    background: transparent
+    &__small
+      width: 115px
+      height: 173px
+      border-left: 1px solid #3FDB90
+      border-radius: 20px 0 0 20px
+      position: relative
+      left: -100px
+      top: -125px
+      &::before
+        content: ''
+        display: block
+        border: 3px solid transparent
+        border-left: 6px solid #ffffff
+        position: absolute
+        bottom: -2px
+        right: -8px
+      &__item
+        height: 50%
+        &:nth-child(1)
+          width: 77px
+          border-top: 1px solid #3FDB90
+          border-radius: 20px 0 0 0
+        &:nth-child(2)
+          width: 100%
+          border-bottom: 1px solid #3FDB90
+          border-radius: 0 0 0 20px
+    &__big
+      width: 530px
+      height: 250px
+      border-right: 1px solid #3FDB90
+      border-radius: 0 20px 20px 0
+      position: relative
+      right: -575px
+      bottom: 88px
+      &::before
+        content: ''
+        display: block
+        border: 3px solid transparent
+        border-right: 6px solid #ffffff
+        position: absolute
+        bottom: -2px
+        left: -8px
+      &__item
+        height: 50%
+        &:nth-child(1)
+          width: 100px
+          border-top: 1px solid #3FDB90
+          border-radius: 0 20px 0 0
+          margin-left: auto
+        &:nth-child(2)
+          width: 100%
+          border-bottom: 1px solid #3FDB90
+          border-radius: 0 0 20px 0
