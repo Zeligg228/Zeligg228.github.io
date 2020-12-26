@@ -369,9 +369,10 @@ body {
 }
 
 .container {
-  max-width: 1020px;
+  max-width: 1120px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0px 50px;
 }
 
 a {
@@ -501,7 +502,6 @@ a {
 
 .header__image {
   width: 44.3%;
-  height: 515px;
   position: relative;
   z-index: 1;
 }
@@ -757,8 +757,18 @@ a {
           align-items: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-top: -175px;
-  margin-bottom: -250px;
+  position: relative;
+  padding: 0px 25px;
+}
+
+.step-block__bg {
+  position: absolute;
+  top: -32%;
+  left: -8%;
+}
+
+.step-block__bg > img {
+  max-width: 110%;
 }
 
 .step-block__item {
@@ -830,83 +840,6 @@ a {
 .step-block__arrow > img {
   display: block;
   max-width: 100%;
-}
-
-.step-box {
-  background: transparent;
-}
-
-.step-box__small {
-  width: 115px;
-  height: 173px;
-  border-left: 1px solid #3FDB90;
-  border-radius: 20px 0 0 20px;
-  position: relative;
-  left: -100px;
-  top: -125px;
-}
-
-.step-box__small::before {
-  content: '';
-  display: block;
-  border: 3px solid transparent;
-  border-left: 6px solid #ffffff;
-  position: absolute;
-  bottom: -2px;
-  right: -8px;
-}
-
-.step-box__small__item {
-  height: 50%;
-}
-
-.step-box__small__item:nth-child(1) {
-  width: 77px;
-  border-top: 1px solid #3FDB90;
-  border-radius: 20px 0 0 0;
-}
-
-.step-box__small__item:nth-child(2) {
-  width: 100%;
-  border-bottom: 1px solid #3FDB90;
-  border-radius: 0 0 0 20px;
-}
-
-.step-box__big {
-  width: 530px;
-  height: 250px;
-  border-right: 1px solid #3FDB90;
-  border-radius: 0 20px 20px 0;
-  position: relative;
-  right: -575px;
-  bottom: 88px;
-}
-
-.step-box__big::before {
-  content: '';
-  display: block;
-  border: 3px solid transparent;
-  border-right: 6px solid #ffffff;
-  position: absolute;
-  bottom: -2px;
-  left: -8px;
-}
-
-.step-box__big__item {
-  height: 50%;
-}
-
-.step-box__big__item:nth-child(1) {
-  width: 100px;
-  border-top: 1px solid #3FDB90;
-  border-radius: 0 20px 0 0;
-  margin-left: auto;
-}
-
-.step-box__big__item:nth-child(2) {
-  width: 100%;
-  border-bottom: 1px solid #3FDB90;
-  border-radius: 0 0 20px 0;
 }
 
 .connection {
