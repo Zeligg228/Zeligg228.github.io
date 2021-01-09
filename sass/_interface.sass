@@ -6,9 +6,18 @@ body
   background-size: 100% 100%
   font-family: Roboto-regular, sans-serif
 .container
-  max-width: 1120px
+  max-width: 1185px
   margin-left: auto
   margin-right: auto
-  padding: 0px 50px
+  padding: 0px 75px
 a
   text-decoration: none
+@media ( max-width: 768px )
+  body
+    background-image: url('../img/background-md.jpg')
+@media ( max-width: 500px )
+  .container
+    padding: 0px 10%
+@media ( max-width: 400px )
+  body
+    background-image: url('../img/background-sm.jpg')

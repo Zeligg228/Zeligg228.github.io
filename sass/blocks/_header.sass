@@ -1,30 +1,32 @@
 .header
+  position: relative
   &-block
     display: flex
     justify-content: space-between
     align-items: flex-start
-    padding-right: 52px
+    padding-right: 50px
   &__text
-    width: 49.5%
+    width: 49%
+    min-width: 345px
     padding-top: 30px
-    padding-bottom: 55px
+    padding-bottom: 85px
   &__overhead
     display: block
-    margin-bottom: 35px
+    margin-bottom: 20px
     color: #D8D8D8
     font-size: 18px
   &__title
     margin-top: 0
     margin-bottom: 20px
     font-size: 64px
-    line-height: 117.5%
+    line-height: 110%
     color: #FFFFFF
     +bold
     & > strong
       color: #3FDB90
   &__subtitle
     display: block
-    margin-bottom: 33px
+    margin-bottom: 30px
     color: #D8D8D8
     font-size: 24px
     +medium
@@ -42,7 +44,7 @@
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 91.36%, rgba(19, 42, 99, 0.35) 97.42%), linear-gradient(180deg, rgba(95, 197, 255, 0.5) 4.55%, rgba(255, 255, 255, 0) 12.15%), linear-gradient(180deg, #5DB3FD 0%, #0089FF 100%)
     box-shadow: 7px 4px 24px rgba(26, 48, 96, 0.51)
     border-radius: 8px
-    width: 61%
+    width: 290px
     height: 60px
     cursor: pointer
     padding: 0
@@ -52,34 +54,123 @@
     &:hover
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, rgba(255, 255, 255, 0) 91.36%, rgba(19, 42, 99, 0.35) 97.42%), linear-gradient(180deg, rgba(95, 197, 255, 0.5) 4.55%, rgba(255, 255, 255, 0) 12.15%), linear-gradient(180deg, #5DB3FD 0%, #0089FF 100%),
   &__image
-    width: 44.3%
-    // height: 515px
-
+    width: 44.5%
+    min-width: 300px
+    min-height: 462px
     position: relative
     z-index: 1
+    margin-bottom: -120px
     &::before
       content: ''
       position: absolute
       z-index: -1
       display: block
-      width: 147%
-      height: 123%
+      width: 631px
+      height: 631px
+      max-width: 141%
+      max-height: 100%
       border-radius: 50%
-      background: linear-gradient(179.9deg, rgba(74, 104, 168, 0.22) 0.09%, rgba(69, 99, 164, 0) 52.22%)
-      left: -9%
-      top: 9%
+      left: -12%
+      top: 7%
+      background-image: url('../img/ellipse-big.png')
+      background-repeat: no-repeat
+      background-size: cover
     &::after
       content: ''
       position: absolute
       z-index: -1
       display: block
-      width: 131%
-      height: 109%
+      width: 561px
+      height: 561px
+      max-width: 126%
+      max-height: 88%
       border-radius: 50%
-      background: linear-gradient(179.9deg, rgba(74, 104, 168, 0.22) 0.09%, rgba(69, 99, 164, 0) 52.22%)
-      left: -1%
-      top: 15%
+      left: -4%
+      top: 11%
+      background-image: url('../img/ellipse-small.png')
+      background-repeat: no-repeat
+      background-size: cover
     & > img
       display: block
       width: 100%
       height: 100%
+      min-height: 462px
+@media ( max-width: 1180px )
+  .header
+    &__title
+      font-size: 58px
+@media ( max-width: 1090px )
+  .header
+    &__title
+      font-size: 52px
+@media ( max-width: 1000px )
+  .header
+    &__text
+      padding-bottom: 48px
+    &__image
+      right: 6%
+      &::before
+        max-width: 118%
+        max-height: 82%
+        left: 0%
+        top: 19%
+      &::after
+        max-width: 107%
+        max-height: 73%
+        left: 6%
+        top: 22%
+    &__title
+      font-size: 46px
+    &__subtitle
+      font-size: 20px
+@media ( max-width: 768px )
+  .header
+    &__overhead
+      margin-bottom: 16px
+    &__subtitle
+      font-size: 18px
+      margin-bottom: 15px
+    &__item
+      margin-bottom: 35px
+@media ( max-width: 750px )
+  .header
+    margin-bottom: 20px
+    overflow: hidden
+    &-block
+      flex-direction: column
+      padding-right: 0
+    &__text
+      width: 94%
+      padding-bottom: 0
+      min-width: 0
+    &__image
+      margin-bottom: 22px
+      width: 90%
+      right: 0
+      min-width: 0
+      min-height: 0
+      & > img
+        min-height: 0
+    &__button
+      position: absolute
+      bottom: 22px
+      left: 9%
+      z-index: 999
+      min-width: 0
+      width: 80%
+@media ( max-width: 550px )
+  .header
+    &__text
+      padding-top: 0
+    &__title
+      font-size: 38px
+@media ( max-width: 400px )
+  .header
+    &__overhead
+      font-size: 14px
+    &__title
+      font-size: 32px
+    &__subtitle
+      font-size: 16px
+    &__item
+      font-size: 14px
