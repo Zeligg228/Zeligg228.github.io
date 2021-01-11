@@ -1,5 +1,10 @@
 .step
   margin-bottom: 110px
+  & > .container
+    background-image: url('../img/step-bg.svg')
+    background-repeat: no-repeat
+    background-position: 0 49%
+    background-size: contain
   &__title
     margin-top: 0
     margin-bottom: 40px
@@ -14,8 +19,7 @@
     justify-content: space-between
     align-items: flex-start
     flex-wrap: wrap
-    position: relative
-    padding-left: 10px
+    padding-left: 20px
     padding-right: 40px
     &__item
       display: flex
@@ -49,18 +53,122 @@
         color: #3FDB90
       &__last
         +bold
-@media ( max-width: 1160px )
+@media ( max-width: 1300px )
+  .step
+    & > .container
+      margin-left: 50px
+      margin-right: 50px
+      padding-left: 6%
+      padding-right: 6%
+@media ( max-width: 1250px )
   .step
     &__title
       font-size: 52px
-@media ( max-width: 1000px )
+    &-block
+      &__image
+        width: 85px
+        height: 85px
+        padding: 20px
+      &__text
+        font-size: 16px
+        line-height: 20px
+@media ( max-width: 1200px )
   .step
+    &-block
+      &__item
+        &__last
+          margin-top: 15px
+@media ( max-width: 1100px )
+  .step
+    & > .container
+      padding-left: 5%
+      padding-right: 5%
+    &-block
+      padding-left: 26px
+      padding-right: 46px
+      &__image
+        width: 80px
+        height: 80px
+        padding: 19px
+@media ( max-width: 1018px )
+  .step
+    & > .container
+      max-width: 700px
+      background-image: url('../img/step-bg-md.svg')
+      background-position: 0 45px
+      background-size: 100%
+      padding-left: 35px
+      padding-right: 35px
+      margin-right: 40px
+      margin-left: 40px
     &__title
-      font-size: 38px
+      font-size: 37px
+    &-block
+      width: 91%
+      padding-left: 0px
+      padding-right: 0px
+      &__item
+        width: 34%
+        &:nth-child(-n+2)
+          margin-bottom: 90px
+        &__last
+          width: 50%
+          padding-left: 15px
+          margin-top: 60px
+      &__image
+        padding: 23px
+        width: 96px
+        height: 96px
+      &__text
+        font-size: 18px
+        line-height: 23px
+@media ( max-width: 795px )
+  .step
+    &-block
+      &__item
+        &:nth-child(-n+2)
+          margin-bottom: 60px
+        &__last
+          margin-top: 60px
+@media ( max-width: 765px )
+  .step
+    &-block
+      &__item
+        &__last
+          margin-top: 50px
 @media ( max-width: 750px )
   .step
+    margin-bottom: 65px
+    & > .container
+      background-image: none
+    &-block
+      width: 100%
+      flex-direction: column
+      align-items: center
+      &__item
+        width: 77%
+        margin-bottom: 40px
+        position: relative
+        &::before
+          content: url('../img/step-arrow.svg')
+          display: block
+          position: absolute
+          top: -24px
+        &:nth-child(-n+2)
+          margin-bottom: 40px
+        &__last
+          margin: 0
+          padding: 0
+        &__text
+          font-size: 17px
+          line-height: 22px
     &__title
       font-size: 32px
       margin-bottom: 32px
       & > strong
         font-size: 34px
+@media ( max-width: 500px )
+  .step
+    & > .container
+      margin: 0
+      padding: 0px 10%
