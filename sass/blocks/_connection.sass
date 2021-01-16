@@ -8,6 +8,22 @@
   margin-bottom: 32px
   padding-top: 82px
   padding-bottom: 85px
+  position: relative
+  &::after
+    content: ''
+    background-image: url('../img/background-elipse.png')
+    background-repeat: no-repeat
+    background-size: 100%
+    background-position: 0 100%
+    display: block
+    position: absolute
+    width: 713px
+    height: 713px
+    bottom: -179px
+    left: 50%
+    margin-left: -355px
+    z-index: -999
+    border-radius: 50%
   &__title
     font-size: 48px
     line-height: 98.19%
@@ -78,6 +94,11 @@
   .connection
     padding-top: 40px
     padding-bottom: 43px
+    &::after
+      height: 550px
+      margin-left: 0
+      left: 10%
+      max-width: 83%
     &__title
       font-size: 34px
       margin-bottom: 36px
@@ -87,12 +108,19 @@
       &__item
         &:last-child
           width: 47%
+@media ( max-width: 768px )
+  .connection
+    &::after
+      bottom: -150px
 @media ( max-width: 750px )
   .connection
     background-color: transparent
     border-radius: 0
     margin-bottom: 20px
     padding: 0
+    border-radius: 16px
+    &::after
+      bottom: -135px
     &__title
       color: #ffffff
       margin-bottom: 16px
@@ -116,5 +144,8 @@
 @media ( max-width: 500px )
   .connection
     margin-bottom: 10px
+    &::after
+      height: 200px
+      bottom: -90px
     &__title
       font-size: 30px

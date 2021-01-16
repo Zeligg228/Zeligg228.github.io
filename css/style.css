@@ -786,6 +786,7 @@ a {
 @media (max-width: 750px) {
   .advantage {
     margin-bottom: 64px;
+    border-radius: 16px;
   }
   .advantage-block {
     max-width: 100%;
@@ -812,6 +813,20 @@ a {
 
 .preference {
   margin-bottom: 390px;
+  position: relative;
+}
+
+.preference::after {
+  content: '';
+  background-image: url("../img/background-mountains.png");
+  background-repeat: no-repeat;
+  background-position: left top;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 1434px;
+  bottom: -920px;
+  z-index: -999;
 }
 
 .preference-block {
@@ -876,6 +891,11 @@ a {
   .preference {
     margin-bottom: 100px;
   }
+  .preference::after {
+    height: 1144px;
+    background-position: -100px top;
+    bottom: -11%;
+  }
   .preference-block {
     flex-direction: column;
     align-items: center;
@@ -902,9 +922,25 @@ a {
   }
 }
 
+@media (max-width: 600px) {
+  .preference::after {
+    bottom: -30%;
+  }
+}
+
 @media (max-width: 400px) {
   .preference {
-    margin-bottom: 320px;
+    margin-bottom: 250px;
+  }
+  .preference::after {
+    bottom: -660px;
+    background-position: -600px top;
+  }
+}
+
+@media (min-width: 1366px) {
+  .preference::after {
+    background-size: 100% 100%;
   }
 }
 
@@ -1268,6 +1304,24 @@ a {
   margin-bottom: 32px;
   padding-top: 82px;
   padding-bottom: 85px;
+  position: relative;
+}
+
+.connection::after {
+  content: '';
+  background-image: url("../img/background-elipse.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 0 100%;
+  display: block;
+  position: absolute;
+  width: 713px;
+  height: 713px;
+  bottom: -179px;
+  left: 50%;
+  margin-left: -355px;
+  z-index: -999;
+  border-radius: 50%;
 }
 
 .connection__title {
@@ -1368,6 +1422,12 @@ a {
     padding-top: 40px;
     padding-bottom: 43px;
   }
+  .connection::after {
+    height: 550px;
+    margin-left: 0;
+    left: 10%;
+    max-width: 83%;
+  }
   .connection__title {
     font-size: 34px;
     margin-bottom: 36px;
@@ -1381,12 +1441,22 @@ a {
   }
 }
 
+@media (max-width: 768px) {
+  .connection::after {
+    bottom: -150px;
+  }
+}
+
 @media (max-width: 750px) {
   .connection {
     background-color: transparent;
     border-radius: 0;
     margin-bottom: 20px;
     padding: 0;
+    border-radius: 16px;
+  }
+  .connection::after {
+    bottom: -135px;
   }
   .connection__title {
     color: #ffffff;
@@ -1417,6 +1487,10 @@ a {
 @media (max-width: 500px) {
   .connection {
     margin-bottom: 10px;
+  }
+  .connection::after {
+    height: 200px;
+    bottom: -90px;
   }
   .connection__title {
     font-size: 30px;

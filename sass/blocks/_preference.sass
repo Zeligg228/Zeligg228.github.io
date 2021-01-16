@@ -1,5 +1,17 @@
 .preference
   margin-bottom: 390px
+  position: relative
+  &::after
+    content: ''
+    background-image: url('../img/background-mountains.png')
+    background-repeat: no-repeat
+    background-position: left top
+    display: block
+    position: absolute
+    width: 100%
+    height: 1434px
+    bottom: -920px
+    z-index: -999
   &-block
     display: flex
     justify-content: space-between
@@ -44,6 +56,10 @@
 @media ( max-width: 750px )
   .preference
     margin-bottom: 100px
+    &::after
+      height: 1144px
+      background-position: -100px top
+      bottom: -11%
     &-block
       flex-direction: column
       align-items: center
@@ -63,6 +79,17 @@
         text-align: center
         font-size: 16px
         line-height: 23px
+@media ( max-width: 600px )
+  .preference
+    &::after
+      bottom: -30%
 @media ( max-width: 400px )
   .preference
-    margin-bottom: 320px
+    margin-bottom: 250px
+    &::after
+      bottom: -660px
+      background-position: -600px top
+@media ( min-width: 1366px )
+  .preference
+    &::after
+      background-size: 100% 100%
