@@ -1751,7 +1751,7 @@ a {
 
 @media (max-height: 600px) {
   .modal {
-    padding: 80% 0;
+    padding: 250px 0;
   }
 }
 
