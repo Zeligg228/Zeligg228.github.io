@@ -31,7 +31,7 @@
           <span class="header__subtitle">Инвестируя в PRO-управляющего</span>
           <p class="header__item">Автоматическая система торгует импульсные движения.
           Чаще всего их можно наблюдать во время сильных трендов, за счет которых происходит движение цены.</p>
-          <button class="header__button">Связаться со мной</button>
+          <button class="header__button" id="open-modal">Связаться со мной</button>
         </div>
         <div class="header__image"><img src="img/iphone-in-hand.png" alt="телефон"></div>
       </div>
@@ -185,5 +185,25 @@
       </div>
     </div>
   </footer>
+  <div class="modal" id="modal">
+      <div class="modal-content">
+        <div class="modal-header"><img src="img/close.png" alt="close" id="close-modal"></div>
+        <div class="modal-block">
+          <div class="modal-block__item">
+            <h2 class="modal__title">Свяжитесь с нами или <strong>откройте счет</strong></h2>
+            <button type="submit" class="modal-block__button">Открыть счёт</button>
+          </div>
+          <div class="modal-block__item">
+            <form action="#" method="post" class="modal-form">
+              <input type="text" class="modal-form__input" placeholder="Ваше имя" required>
+              <input type="text" class="modal-form__input" placeholder="E-mail" required>
+              <input type="text" class="modal-form__input" placeholder="Телефон">
+              <button type="submit" class="modal-form__button">Связаться со мной</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  <script src="js/index.js"></script>
 </body>
 </html>

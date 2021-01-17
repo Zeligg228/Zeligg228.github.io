@@ -1,0 +1,148 @@
+.modal
+  position: fixed
+  z-index: 10000
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  overflow: auto
+  background-color: rgb(0,0,0)
+  background-color: rgba(0,0,0,0.4)
+  display: none
+  align-items: center
+  &-content
+    width: 1185px
+    max-width: 87%
+    background-color: #fff
+    border-radius: 10px
+    margin-left: auto
+    margin-right: auto
+    padding-top: 32px
+    padding-bottom: 85px
+    animation-name: show-modal
+    animation-duration: 0.5s
+  &-header
+    display: flex
+    justify-content: flex-end
+    margin-left: auto
+    margin-right: auto
+    width: 1020px
+    max-width: 93%
+    margin-bottom: 30px
+    & > img
+      cursor: pointer
+  &__title
+    font-size: 48px
+    line-height: 98.19%
+    color: #1A3060
+    margin-top: 0
+    margin-bottom: 55px
+    +medium
+    & > strong
+      color: #3FDB90
+      +medium
+  &-block
+    display: flex
+    align-items: flex-end
+    justify-content: space-between
+    width: 1020px
+    max-width: 93%
+    margin-left: auto
+    margin-right: auto
+    &__item
+      width: 49%
+    &__button
+      width: 100%
+      height: 60px
+      color: #ffffff
+      font-size: 15px
+      background: linear-gradient(180deg, rgba(53, 160, 150, 0) 94.02%, rgba(40, 82, 91, 0.55) 97.69%), linear-gradient(180deg, rgba(82, 255, 193, 0.38) 4.42%, rgba(255, 255, 255, 0) 9.69%), linear-gradient(90.83deg, #3FDB90 0.84%, #329B69 100%)
+      border-radius: 8px
+      border: none
+      outline: none
+      cursor: pointer
+      &:hover
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.69) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, rgba(53, 160, 150, 0) 94.02%, rgba(40, 82, 91, 0.55) 97.69%), linear-gradient(180deg, rgba(82, 255, 193, 0.38) 4.42%, rgba(255, 255, 255, 0) 9.69%), linear-gradient(90.83deg, #3FDB90 0.84%, #329B69 100%)
+  &-form
+    &__input
+      width: 100%
+      height: 50px
+      margin-bottom: 10px
+      padding-left: 20px
+      background: #D8D8D8
+      color: #828282
+      font-size: 15px
+      border-radius: 8px
+      border: none
+      outline: none
+      &:active
+        background: #B8B8B8
+      &:focus
+        background: #B8B8B8
+      &::placeholder
+        color: #828282
+    &__button
+      width: 100%
+      height: 60px
+      color: #ffffff
+      font-size: 15px
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 91.36%, rgba(19, 42, 99, 0.35) 97.42%), linear-gradient(180deg, rgba(95, 197, 255, 0.5) 4.55%, rgba(255, 255, 255, 0) 12.15%), linear-gradient(180deg, #5DB3FD 0%, #0089FF 100%)
+      border-radius: 8px
+      border: none
+      outline: none
+      cursor: pointer
+      &:hover
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, rgba(255, 255, 255, 0) 91.36%, rgba(19, 42, 99, 0.35) 97.42%), linear-gradient(180deg, rgba(95, 197, 255, 0.5) 4.55%, rgba(255, 255, 255, 0) 12.15%), linear-gradient(180deg, #5DB3FD 0%, #0089FF 100%)
+.modal-active
+  display: flex
+.body-overflow
+  overflow: hidden
+@media ( max-width: 1155px )
+  .modal
+    &__title
+      font-size: 40px
+@media ( max-width: 1000px )
+  .modal
+    &-content
+      padding-top: 10px
+      padding-bottom: 43px
+    &-header
+      margin-bottom: 15px
+    &__title
+      font-size: 34px
+      margin-bottom: 36px
+    &-block
+      margin-right: 24px
+      margin-left: 24px
+      &__item
+        &:last-child
+          width: 47%
+@media ( max-width: 750px )
+  .modal
+    &-content
+      padding: 10px 16px 32px 16px
+    &-header
+      margin-left: 0
+      margin-right: 0
+      max-width: 100%
+    &__title
+      margin-bottom: 16px
+    &-block
+      margin-left: 0
+      margin-right: 0
+      max-width: 100%
+      flex-direction: column
+      &__item
+        width: 100%
+        &:last-child
+          width: 100%
+          background-color: #fff
+          margin-top: 32px
+    &-form
+      &__input
+        font-size: 14px
+        margin-bottom: 8px
+@media ( max-width: 500px )
+  .modal
+    &__title
+      font-size: 30px
