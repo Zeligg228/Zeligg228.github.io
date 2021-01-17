@@ -1749,6 +1749,12 @@ a {
   }
 }
 
+@media (max-height: 600px) {
+  .modal {
+    padding: 80% 0;
+  }
+}
+
 @keyframes show-modal {
   from {
     top: -1000px;
